@@ -1,4 +1,4 @@
-[>Click here to check my simple project<](gorgeous-strudel-b7ed47.netlify.app)
+[>Click here to check my simple project<](https://gorgeous-strudel-b7ed47.netlify.app/)
 
 # HTML 
 (Hyper Text Markup Language)
