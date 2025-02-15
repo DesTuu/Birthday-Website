@@ -1,4 +1,5 @@
-# HTML
+# HTML 
+(Hyper Text Markup Language)
 
 ### 1. Inputs type
 ```
@@ -55,7 +56,8 @@ In opposite to div span makes changes in line text
 </div>
 ```
 ---------------------------------------------------------------------------------------
-# CSS
+# CSS 
+(Cascading Style Sheets)
 
 ### 1. Centering image (only one thing)
 ```
@@ -92,6 +94,7 @@ text-align: center
 ```
 ---------------------------------------------------------------------------------------
 ### 3. More classes in one
+HTML Code
 ```
 <div class="btn-wrapper italic">
 <div class="container italic">
@@ -157,7 +160,7 @@ If font in body, buttons don't get them, we need to
 font-family: inherit;
 ```
 ---------------------------------------------------------------------------------------
-### 7. Custom Fonts (downloaded)
+### 8. Custom Fonts (downloaded)
 [>1001 Fonts<](https://www.1001fonts.com/search.html?search=godfather)
 ```
 @font-face {
@@ -171,14 +174,14 @@ Corleone_ttf = os.get_file(path="../fonts/corleone/Corleone.ttf")
 font.use(Corleone_tft)
 ```
 ---------------------------------------------------------------------------------------
-### 8. Span in CSS - underline one word
+### 9. Span in CSS - underline one word
 ```
 .underline {
 border-bottom: 2px solid white;
 }
 ```
 ---------------------------------------------------------------------------------------
-### 9. ID in CSS instead of class, when?
+### 10. ID in CSS instead of class, when?
 Only use id="name" if you want use this only **one time**
 Then . in css doesn't work, use # instead
 ```
@@ -186,15 +189,33 @@ Then . in css doesn't work, use # instead
 color: red;
 }
 ```
+You can overwrite previous class by using id later
+HTML
+```
+<div class="my-class" id="my-id">
+	my_text
+</div>
+```
+CSS
+```
+.my-class {
+	height: 400;
+	# other stuff here
+}
+
+#my-id {
+	height: 200;
+}
+```
 ---------------------------------------------------------------------------------------
-### 10. Backgound with .webp and .gif
+### 11. Backgound with .webp and .gif
 [>Giphy<](https://giphy.com/gifs/trippy-weird-psychedelic-3ov9k1173PdfJWRsoE)
 .webp is like .gif but size of this file is much smaller
 Anyway we can use both of them
 Way is the same as the image in background
 
 ---------------------------------------------------------------------------------------
-### 11. Text Shadow
+### 12. Text Shadow
 ```
 .shadow {
 text-shadow: 2px 2px black;
@@ -220,19 +241,19 @@ text-shadow: 0px 0px 10px black;
 ```
 
 ---------------------------------------------------------------------------------------
-### 12. Color Contrast Checker
+### 13. Color Contrast Checker
 [>Userway - Color Contrast Checker<](https://userway.org/contrast/?fg=000000&bg=ffffff)
 Check here if your colors collaborate well together
 
-------------------------------------------------------------------------------------—
-### 13. Multi CSS Selectors in one line
+---------------------------------------------------------------------------------------
+### 14. Multi CSS Selectors in one line
 ```
 h1, h2, h3 {
 text-shadow: 0px 0px 1px black;
 }
 ```
-------------------------------------------------------------------------------------—
-### 14. Columns (not as default block html)
+---------------------------------------------------------------------------------------
+### 15. Columns (not as default block html)
 ```
 body {
 display: flex;
@@ -244,3 +265,68 @@ align-items: center;
 align-items works in column (so you make place something at bottom)
 justify-content works inline, in row (so you make place something on left)
 if you change flex-direction into column (from default row value) these two values above work in opposite
+
+---------------------------------------------------------------------------------------
+### 16. Hover (when touched)
+```
+div:hover {
+background: black;
+}
+```
+```
+div:hover {
+background-image: url("images/example.png");
+}
+```
+
+---------------------------------------------------------------------------------------
+### 17. Background Gradient
+```
+.img {
+background: linear-gradient(red, blue);
+}
+```
+From red (top) to blue (bot)
+
+---------------------------------------------------------------------------------------
+# CSS (Summary)
+
+### Some class stuff
+```
+.my-class {
+	color: black; 					/\* Text color \*/
+	background-color: white; 		/\* Background color \*/
+	font-size: 16px; 				/\* Text size \*/
+	font-family: Arial, sans-serif; /\* Font type \*/
+	line-height: 1.5; 				/\* Spacing between lines of text \*/
+	text-align: center; 			/\* Align text horizontally \*/
+	margin: 10px; 					/\* Space outside the element \*/
+	padding: 20px; 					/\* Space inside the element \*/
+	border: 2px solid black; 		/\* Border properties \*/
+	width: 100px; 					/\* Width of the element \*/
+	height: 50px; 					/\* Height of the element \*/
+	display: block; 				/\* Block-level element \*/
+	position: relative; 			/\* Positioning relative to normal position \*/
+}
+```
+### Some id stuff
+```
+#my-id {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-shadow: 0px 0px 1px black;
+	background: linear-gradient(red, blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px solid white;
+	margin: 10 auto
+}
+```
+### Not Google Font (not linked and downloaded)
+```
+@font-face {
+src: url("../fonts/corleone/Corleone.ttf");
+font-family: Corleone;
+}
+```
